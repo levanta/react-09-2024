@@ -7,8 +7,8 @@ const Menu = ({ menu }) => (
   <div>
     <h3>Меню</h3>
     <ul>
-      {menu.map((el) => (
-        <li key={el.id}>{el.name}</li>
+      {menu.map((menuItem) => (
+        <li key={menuItem.id}>{menuItem.name}</li>
       ))}
     </ul>
   </div>
@@ -18,22 +18,26 @@ const Reviews = ({ reviews }) => (
   <div>
     <h3>Отзывы</h3>
     <ul>
-      {reviews.map((el) => (
-        <li key={el.id}>
-          {el.user}: {el.text}
+      {reviews.map((review) => (
+        <li key={review.id}>
+          {review.user}: {review.text}
         </li>
       ))}
     </ul>
   </div>
 );
 
-const Restaurant = ({ el }) => (
+const Restaurant = ({ restaurant }) => (
   <div>
-    <h2>{el.name}</h2>
-    <Menu menu={el.menu} />
-    <Reviews reviews={el.reviews} />
+    <h2>{restaurant.name}</h2>
+    <Menu menu={restaurant.menu} />
+    <Reviews reviews={restaurant.reviews} />
     <hr />
   </div>
 );
 
-root.render(restaurants.map((el) => <Restaurant key={el.id} el={el} />));
+root.render(
+  restaurants.map((restaurant) => (
+    <Restaurant key={restaurant.id} restaurant={restaurant} />
+  )),
+);
