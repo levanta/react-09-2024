@@ -1,5 +1,6 @@
 import React from "react";
-import useAmount from "./use-amount";
+import Counter from "../counter/Counter";
+import useAmount from "../../hooks/use-amount";
 
 const Product = ({ product }) => {
   const { amount, increment, decrement } = useAmount(0);
@@ -14,11 +15,7 @@ const Product = ({ product }) => {
           <p>{product.ingredients.join(", ")}</p>
           <div>{product.price}</div>
         </div>
-        <div>
-          <button onClick={decrement}>-</button>
-          {amount}
-          <button onClick={increment}>+</button>
-        </div>
+        <Counter amount={amount} increment={increment} decrement={decrement} />
       </div>
     </div>
   );

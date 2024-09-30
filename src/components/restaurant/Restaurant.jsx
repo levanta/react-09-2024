@@ -1,6 +1,8 @@
 import React from "react";
 import Menu from "../menu/Menu";
 import Reviews from "../reviews/Reviews";
+import Counter from "../counter/Counter";
+import ReviewForm from "../review-form/ReviewForm";
 
 const Restaurant = ({ restaurant }) => {
   const { id, name, menu, reviews } = restaurant;
@@ -12,6 +14,7 @@ const Restaurant = ({ restaurant }) => {
       <h2>Меню</h2>
       <Menu menu={menu} />
       <Reviews reviews={reviews} />
+      <ReviewForm />
     </div>
   );
 };
