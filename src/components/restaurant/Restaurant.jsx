@@ -1,7 +1,6 @@
 import React from "react";
 import Menu from "../menu/Menu";
 import Reviews from "../reviews/Reviews";
-import Counter from "../counter/Counter";
 import ReviewForm from "../review-form/ReviewForm";
 
 const Restaurant = ({ restaurant }) => {
