@@ -4,7 +4,7 @@ import Reviews from "../reviews/Reviews";
 import ReviewForm from "../review-form/ReviewForm";
 
 const Restaurant = ({ restaurant }) => {
-  const { id, name, menu, reviews } = restaurant;
+  const { menu, reviews } = restaurant;
 
   if (!restaurant) return null;
 

@@ -1,5 +1,4 @@
-import React, { useEffect } from "react";
-import useAmount from "../../hooks/use-amount";
+import React from "react";
 import { useForm } from "../../hooks/use-form";
 import Rate from "./Rate";
 
