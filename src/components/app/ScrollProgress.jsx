@@ -1,15 +1,14 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 const ScrollProgress = () => {
-  const progress = useRef();
+  const [scroll, setScroll] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
       const percent =
         (window.scrollY * 100) /
         (document.body.offsetHeight - window.innerHeight);
-      const width = Math.min(percent, 100);
-      if (progress.current) progress.current.style.width = width + "%";
+      setScroll(Math.min(percent, 100));
     };
 
     document.addEventListener("scroll", handleScroll);
@@ -17,9 +16,9 @@ const ScrollProgress = () => {
     return () => {
       document.removeEventListener("scroll", handleScroll);
     };
-  }, [progress.current]);
+  }, []);
 
-  return <div ref={progress} />;
+  return <div style={{ width: scroll + "%" }} />;
 };
 
 export default ScrollProgress;
