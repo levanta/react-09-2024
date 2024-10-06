@@ -1,0 +1,14 @@
+:root {
+    --black: #1d1d1d;
+    --white: #ffffff;
+    --green: #49ab39;
+    --grey: #e5e5e5;
+    --grey-dark: #898989;
+}
+body{
+    margin: 0;
+    font-family: -apple-system, sans-serif;
+}
+a img{border:none;}
+*{outline: none;}
+input, button { appearance: none; box-shadow: none; }
