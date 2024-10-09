@@ -27,6 +27,11 @@
     color: #fff;
 }
 
+.button.theme{
+    background-color: var(--grey-dark);
+    color: #fff;
+}
+
 @media (hover: hover) and (pointer: fine) {
     .button:hover{
         background-color: var(--black);
